@@ -1,7 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.5'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-    id 'java'
+        id 'java'
 }
 
 group = 'com.kodilla-cours'
@@ -13,10 +11,14 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 tasks.named('test') {
+    useJUnitPlatform()
+}
+
+
+test {
     useJUnitPlatform()
 }
