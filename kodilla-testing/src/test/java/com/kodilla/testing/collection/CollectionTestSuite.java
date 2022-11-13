@@ -1,13 +1,10 @@
 package com.kodilla.testing.collection;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.*;
+import com.kodilla.testing.collection.OddNumbersExterminator;
 import java.util.ArrayList;
 import java.util.List;
-import com.kodilla.testing.collection.OddNumbersExterminator;
+
 
 public class CollectionTestSuite {
 
@@ -24,17 +21,26 @@ public class CollectionTestSuite {
 
     @Test
     void testOddNumbersExterminatorEmptyList(){
-        List<Integer> oddNumbersList = new ArrayList<>();
-        System.out.println("Testing empty list");
+        //given
+        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
+        //when
+        oddNumbersExterminator.exterminate(null);
+        //then
+        Assertions.assertEquals((Integer) null, null);
     }
     @DisplayName("When the list has an even and an odd numbers")
     @Test
     void testOddNumbersExterminatorNormalList(){
+        //Given
+        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
+        //When
+        ArrayList<Integer> List = new ArrayList<>();
+        List.add(1);
+        List.add(2);
+        List.add(3);
 
-            List<Integer> oddNumbersList = new ArrayList<>();
-            for(Integer number: oddNumbersList){
-                    oddNumbersList.add(number);
-            }
-        System.out.println("Testing full list");
+        oddNumbersExterminator.exterminate(List);
+        //Then
+        Assertions.assertEquals(List, List);
     }
 }
