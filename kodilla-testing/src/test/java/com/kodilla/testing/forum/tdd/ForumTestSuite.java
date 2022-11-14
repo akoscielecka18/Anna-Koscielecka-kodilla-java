@@ -110,4 +110,22 @@ public class ForumTestSuite {
         Assertions.assertTrue(result);
         Assertions.assertEquals(0, forumUser.getPostsQuantity());
     }
+    @Test
+    void testRemoveComment() {
+        //Given
+        ForumUser forumUser = new ForumUser("mrsmith", "John Smith");
+        ForumPost thePost = new ForumPost("Hello everyone, " +
+                "this is my first contribution here!", "mrsmith");
+        ForumComment theComment = new ForumComment(thePost, "mrsmith",
+                "Thank you for all good words!");
+        forumUser.addComment(thePost, theComment.getAuthor(),
+                theComment.getCommentBody());
+
+        //When
+        boolean result = forumUser.removeComment(theComment);
+
+        //Then
+        Assertions.assertTrue(result);
+        Assertions.assertEquals(0, forumUser.getCommentsQuantity());
+    }
 }

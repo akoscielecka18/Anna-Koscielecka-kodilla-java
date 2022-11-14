@@ -24,9 +24,10 @@ public class CollectionTestSuite {
         //given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         //when
-        oddNumbersExterminator.exterminate(null);
+        List<Integer> emptyList = new ArrayList<>();
+        List<Integer> oddNumbersExterminatorEmpty = oddNumbersExterminator.exterminate(emptyList);
         //then
-        Assertions.assertEquals((Integer) null, null);
+        Assertions.assertEquals(emptyList, oddNumbersExterminatorEmpty);
     }
     @DisplayName("When the list has an even and an odd numbers")
     @Test
@@ -34,13 +35,11 @@ public class CollectionTestSuite {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         //When
-        ArrayList<Integer> List = new ArrayList<>();
-        List.add(1);
-        List.add(2);
-        List.add(3);
+        List<Integer> input = List.of(1,2,3);
+        List<Integer> output=oddNumbersExterminator.exterminate(input);
+        List<Integer> expected= List.of(2);
 
-        oddNumbersExterminator.exterminate(List);
         //Then
-        Assertions.assertEquals(List, List);
+        Assertions.assertEquals(expected, output);
     }
 }
