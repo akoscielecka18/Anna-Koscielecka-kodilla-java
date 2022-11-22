@@ -10,28 +10,23 @@ public class CalculateStatistic {
     public CalculateStatistic(Statistics statistics){
         this.statistics = statistics;
     }
-
-    int numbersOfUsers = statistics.usersNames().size();
-    int numberOfPosts = statistics.postsCount();
-    int numberOfComments = statistics.commentsCount();
-
-    public double averagePostsNumberOfUser(){
-        return statistics.postsCount()/numbersOfUsers;
+    public List<String> userNames(){
+        return statistics.usersNames();
     }
-    public double averageCommentsOfUser(){
-        return statistics.commentsCount()/numbersOfUsers;
+    public int postsCount() {
+
+        return statistics.postsCount();
     }
-    public double averageCommentsOfPost(){
-        return statistics.commentsCount()/numberOfPosts;
+
+    public int commentsCount() {
+        return statistics.commentsCount();
     }
 
     public void calculateAdvStatistics(Statistics statistics){
-        int numbersOfUsers;
-        int numberOfPosts;
-        int numberOfComments;
-        double averagePostsNumberOfUser;
-        double averageCommentsOfUser;
-        double averageCommentsOfPost;
+        int usersCount = statistics.usersNames().size();
+        double averagePostsNumberOfUser = statistics.postsCount()/usersCount;
+        double averageCommentsOfUser = statistics.commentsCount()/usersCount;
+        double averageCommentsOfPost = statistics.commentsCount()/ statistics.postsCount();
     }
     public List<String> showStatistics() {
         return null;

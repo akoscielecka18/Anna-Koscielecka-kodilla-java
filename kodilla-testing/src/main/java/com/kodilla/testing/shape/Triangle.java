@@ -3,13 +3,19 @@ import com.kodilla.testing.shape.Shape;
 
 public class Triangle implements Shape{
 
-    @Override
-    public void getShapeName() {
+    private double c, b;
 
+    public Triangle(double c, double b){
+        this.c = c;
+        this.b = b;
+    }
+    @Override
+    public String getShapeName() {
+        return "triangle";
     }
 
     @Override
-    public void getField() {
-
+    public double getField() {
+        return c*b;
     }
 }
