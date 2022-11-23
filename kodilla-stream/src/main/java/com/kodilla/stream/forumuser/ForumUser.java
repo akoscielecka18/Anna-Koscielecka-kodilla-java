@@ -10,7 +10,7 @@ public final class ForumUser {
     private final LocalDate localDate;
     private final int postNumber;
 
-    public ForumUser(int id, String userName, char sex, LocalDate localDate, int postNumber) {
+    public ForumUser(final int id, final String userName,final char sex, final LocalDate localDate, final int postNumber) {
         this.id = id;
         this.userName = userName;
         this.sex = sex;
