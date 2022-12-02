@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FlightSearch {
 
-    public String findFilght(Flight flight) throws RouteNotFoundException{
+    public String findFlight(Flight flight) throws RouteNotFoundException{
             Map<String, Boolean> openAirport = new HashMap<>();
 
             openAirport.put("London", true);

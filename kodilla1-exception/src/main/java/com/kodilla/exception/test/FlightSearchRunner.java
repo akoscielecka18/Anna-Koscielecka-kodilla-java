@@ -7,7 +7,7 @@ public class FlightSearchRunner {
         FlightSearch flightSearch = new FlightSearch();
 
         try{
-            flightSearch.findFilght(new Flight("Oslo", "Warsaw"));
+            flightSearch.findFlight(new Flight("Oslo", "Warsaw"));
         }catch (RouteNotFoundException e){
             System.out.println("Choose different airport " +e);
         }
@@ -15,7 +15,7 @@ public class FlightSearchRunner {
         System.out.println("Now is fine");
 
         try{
-            flightSearch.findFilght(new Flight("London", "Warsaw"));
+            flightSearch.findFlight(new Flight("London", "Warsaw"));
         }catch (RouteNotFoundException e){
             System.out.println("Choose different airport " +e);
         }finally{
