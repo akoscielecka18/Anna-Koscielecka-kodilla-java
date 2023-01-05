@@ -15,11 +15,11 @@ public class FlightSearchRunner {
         System.out.println("Now is fine");
 
         try{
-            flightSearch.findFlight(new Flight("London", "Warsaw"));
+            flightSearch.findFlight(new Flight("Amsterdam", "Warsaw"));
         }catch (RouteNotFoundException e){
             System.out.println("Choose different airport " +e);
         }finally{
-            System.out.println("have a nice journey");
+            System.out.println("have a nice journey1");
         }
 
 
