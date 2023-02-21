@@ -1,5 +1,4 @@
-package com.kodilla.spring.web;
-
+package com.kodilla.spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +8,4 @@ public class KodillaSpringWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(KodillaSpringWebApplication.class, args);
     }
-
 }
